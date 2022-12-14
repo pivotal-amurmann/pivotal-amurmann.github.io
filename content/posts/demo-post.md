@@ -1,7 +1,7 @@
 ---
 title: "Demo Post"
 date: 2022-12-14T13:20:07-08:00
-draft: true
+draft: false
 ---
 ## GemFire
 
