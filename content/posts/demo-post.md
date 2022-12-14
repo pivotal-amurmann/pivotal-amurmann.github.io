@@ -4,5 +4,19 @@ date: 2022-12-14T13:20:07-08:00
 draft: false
 ---
 ## GemFire
+The getKeySet method:
+* creates a proxy Region connected to the input site
+* gets the keySet for the Region on that site using keySetOnServer
+closes the Region
+* The getKeySet method is invoked for each site.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+```java
+private Set getKeySet(String regionName, String siteName) {
+ Region region = createRegion(regionName, siteName);
+ Set keySet = region.keySetOnServer();
+ closeRegion(region);
+ return keySet;
+}
+```
+
+![diagram](https://content.cdntwrk.com/files/aHViPTYzOTc1JmNtZD1pdGVtZWRpdG9yaW1hZ2UmZmlsZW5hbWU9aXRlbWVkaXRvcmltYWdlXzVmZTBlOTRhM2MwMTcucG5nJnZlcnNpb249MDAwMCZzaWc9YzYzNWIzYWFhMzQwYzJjZDQwZDU0ODNiYmZiN2I2ZTE%253D)

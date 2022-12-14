@@ -2,3 +2,6 @@ baseURL = 'pivotal-amurmann.github.io'
 languageCode = 'en-us'
 title = 'GF Hugo Page'
 theme = 'ananke'
+
+[params]
+  custom_css = ["vmw.css"]
