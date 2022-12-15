@@ -4,6 +4,8 @@ date: 2022-12-14T13:20:07-08:00
 draft: false
 ---
 ## GemFire
+This shows formatting!
+
 The getKeySet method:
 * creates a proxy Region connected to the input site
 * gets the keySet for the Region on that site using keySetOnServer
